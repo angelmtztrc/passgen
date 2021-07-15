@@ -1,7 +1,7 @@
 import * as Colors from 'https://deno.land/std/fmt/colors.ts';
 import { Command } from 'https://deno.land/x/cliffy/command/mod.ts';
 
-import { CreatePassword } from './libs/create-password.ts';
+import { createPassword } from './libs/create-password.ts';
 
 // initialize command
 const { options } = await new Command()
@@ -16,7 +16,7 @@ const { options } = await new Command()
 const { length, allowSymbols, allowNumbers } = options;
 
 // generate and store the password
-const password = CreatePassword({ length, allowSymbols, allowNumbers });
+const password = createPassword({ length, allowSymbols, allowNumbers });
 
 // print the result
 console.info(Colors.yellow('Generated Password:'), Colors.white(password));

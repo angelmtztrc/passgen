@@ -4,7 +4,7 @@ interface CreatePasswordProps {
   allowNumbers: boolean;
 }
 
-export const CreatePassword = ({
+export const createPassword = ({
   length,
   allowSymbols,
   allowNumbers
@@ -24,7 +24,9 @@ export const CreatePassword = ({
 
   // generate a password
   for (let idx = 0; idx < length; idx++) {
-    password += characters.charAt(Math.floor(Math.random() * characters.length));
+    password += characters.charAt(
+      Math.floor(Math.random() * characters.length)
+    );
   }
 
   return password;
