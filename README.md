@@ -8,6 +8,9 @@ Before of all make sure that you have installed `Deno 1.11.5` or later. Then run
 
 ```sh
 deno run main.ts [options]
+
+# example
+deno run main.ts --length 20 --allow-symbols
 ```
 
 ## Command-line Options
